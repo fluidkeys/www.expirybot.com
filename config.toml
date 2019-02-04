@@ -1,0 +1,5 @@
+baseURL = "https://www.expirybot.com/"
+languageCode = "en-us"
+title = "Expirybot"
+
+theme = "expirybot"

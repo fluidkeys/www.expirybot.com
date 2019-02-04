@@ -1,0 +1,14 @@
+<!doctype html>
+<html lange="{{ with .Site.LanguageCode }}{{ . }}{{ else }}en-US{{ end }}">
+    <head>
+        <meta charset="utf-8">
+        <title>{{ .Title }} - {{ .Site.Title }}</title>
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        {{ .Hugo.Generator }}
+        {{ $styles := resources.Get "scss/expirybot.scss" | toCSS | fingerprint }}
+        <link href="https://fonts.googleapis.com/css?family=Rubik:700" rel="stylesheet">
+        <link rel="stylesheet" href="{{ $styles.Permalink }}" integrity="{{ $styles.Data.Integrity }}">
+    </head>
+    <body class="body">
+        <main>
